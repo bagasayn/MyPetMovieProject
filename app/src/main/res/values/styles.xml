@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Black" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="fontFamily">@font/roboto_black</item>
+    <style name="Thin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="fontFamily">sans-serif-thin</item>
     </style>
 
-    <style name="Bold" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="fontFamily">@font/roboto_bold</item>
+    <style name="Medium" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="fontFamily">sans-serif-medium</item>
     </style>
 
     <style name="Light" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="fontFamily">@font/roboto_light</item>
+        <item name="fontFamily">sans-serif-light</item>
     </style>
 </resources>
