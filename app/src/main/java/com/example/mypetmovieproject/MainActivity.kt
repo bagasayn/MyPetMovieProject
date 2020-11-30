@@ -8,8 +8,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_movies_list)
+
         val miniLogo = findViewById<ImageView>(R.id.movie_avengers)
         miniLogo.clipToOutline = true
+
 //        robert.clipToOutline = true
 //        val robert = findViewById<ImageView>(R.id.robert)
 //        robert.clipToOutline = true
