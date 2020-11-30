@@ -1,6 +1,5 @@
 package com.example.mypetmovieproject
 
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -8,7 +7,7 @@ import android.widget.ImageView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.fragment_movie_details)
 
         val robert = findViewById<ImageView>(R.id.robert)
         robert.clipToOutline = true
