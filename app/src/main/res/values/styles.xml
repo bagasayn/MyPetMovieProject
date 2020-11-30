@@ -12,4 +12,8 @@
     <style name="Light" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="fontFamily">sans-serif-light</item>
     </style>
+
+    <style name="Black" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="fontFamily">sans-serif-black</item>
+    </style>
 </resources>

@@ -11,4 +11,11 @@
     <item name="marginNameFilm" type="dimen">8dp</item>
     <item name="marginRating" type="dimen">8dp</item>
 
+    <dimen name="paddingLeft">8dp</dimen>
+    <dimen name="marginTopMoviesList">40dp</dimen>
+    <dimen name="Mini_marginBottom">50dp</dimen>
+    <dimen name="mini_age_marginStart">8dp</dimen>
+    <dimen name="mini_age_marginTop">8dp</dimen>
+    <dimen name="mini_like_marginTop">13dp</dimen>
+    <dimen name="mini_like_marginEnd">6dp</dimen>
 </resources>
