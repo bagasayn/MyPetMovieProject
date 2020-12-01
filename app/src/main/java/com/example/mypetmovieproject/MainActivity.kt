@@ -1,47 +1,37 @@
 package com.example.mypetmovieproject
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
+
 
 class MainActivity : AppCompatActivity(), ClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        changeRadius()
+        //передаем в контейнер наш фрагмент
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction().apply {
                 add(
-                    R.id.fragment_movie_details, FragmentMoviesList()
+                    R.id.main_container, FragmentMoviesList()
                 ).commit()
             }
         }
 
     }
-
-    private fun changeRadius() {
-        val miniLogo = findViewById<ImageView>(R.id.movie_avengers)
-        miniLogo.clipToOutline = true
-
-        val robert = findViewById<ImageView>(R.id.robert)
-        robert.clipToOutline = true
-
-        val evans = findViewById<ImageView>(R.id.evans)
-        evans.clipToOutline = true
-
-        val mark = findViewById<ImageView>(R.id.mark)
-        mark.clipToOutline = true
-
-        val hemsworth = findViewById<ImageView>(R.id.hemsworth)
-        hemsworth.clipToOutline = true
-    }
-
     override fun openMovieDetails() {
+        //заменяем в контейнере фрагмент на новый и добавляем старый в backStack
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.fragment_movie_details, FragmentMoviesDetails())
+            .replace(R.id.main_container, FragmentMoviesDetails())
             .addToBackStack(null)
             .commit()
     }
+
+    override fun back() {
+        supportFragmentManager.popBackStack()
+    }
+
+
 }
