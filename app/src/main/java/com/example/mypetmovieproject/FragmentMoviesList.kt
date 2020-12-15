@@ -24,9 +24,9 @@ class FragmentMoviesList: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //слушаем нажатие на View нашего фильма
-        view.findViewById<View>(R.id.fragment_movie_details).setOnClickListener {
-            listener?.openMovieDetails()
-        }
+//        view.findViewById<View>(R.id.fragment_movie_details).setOnClickListener {
+//            listener?.openMovieDetails()
+//        }
     }
     //ищем с context Activity наш listener
     override fun onAttach(context: Context) {
