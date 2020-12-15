@@ -11,5 +11,6 @@
     <color name="pink">#FF3466</color>
     <color name="gray">#6D6D80</color>
     <color name="background_black">#191926</color>
+    <color name="background_center">#00191926</color>
 
 </resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/mini_hero"/>
+    <item android:drawable="@drawable/ic_mask_movie_avengers"/>
+</layer-list>

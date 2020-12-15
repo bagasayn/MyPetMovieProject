@@ -18,10 +18,9 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_margin="3dp"
-        android:background="@drawable/mini_hero"
+        android:background="@drawable/hero_background"
         android:contentDescription="@string/Hero"
-        android:foreground="@drawable/ic_mask_movie_avengers"
-        android:src="@drawable/mini_shape"
+
         app:layout_constraintBottom_toBottomOf="@id/mini_guide_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
