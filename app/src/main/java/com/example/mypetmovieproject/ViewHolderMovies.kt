@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ViewHolderMovies(view: View) : RecyclerView.ViewHolder(view) {
+class ViewHolderMovies(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     private val movie: ImageView = itemView.findViewById(R.id.movie_image)
     private val like: ImageView = itemView.findViewById(R.id.mini_like)
