@@ -19,11 +19,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
         android:contentDescription="@string/Hero"
-        android:src="@drawable/mini_hero"
         app:layout_constraintBottom_toBottomOf="@id/mini_guide_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/avengers_end_game" />
 
     <ImageView
         android:id="@+id/mask_movie_avengers"
@@ -52,12 +52,12 @@
         style="@style/Black"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/age"
         android:textColor="@color/white_text"
         app:layout_constraintBottom_toBottomOf="@id/mini_age_image"
         app:layout_constraintEnd_toEndOf="@id/mini_age_image"
         app:layout_constraintStart_toStartOf="@id/mini_age_image"
-        app:layout_constraintTop_toTopOf="@id/mini_age_image" />
+        app:layout_constraintTop_toTopOf="@id/mini_age_image"
+        tools:text="@string/age" />
 
 
     <ImageView
@@ -69,7 +69,7 @@
         android:contentDescription="@string/mini_like"
         app:layout_constraintEnd_toEndOf="@id/movie_image"
         app:layout_constraintTop_toTopOf="@id/movie_image"
-        app:srcCompat="@drawable/ic_mini_like_off" />
+        tools:srcCompat="@drawable/ic_mini_like_off" />
 
     <ImageView
         android:id="@+id/mini_icon_1"
@@ -82,7 +82,7 @@
         app:layout_constraintBottom_toBottomOf="@id/mini_guide_line"
         app:layout_constraintEnd_toStartOf="@+id/mini_icon_2"
         app:layout_constraintStart_toStartOf="@id/movie_image"
-        app:srcCompat="@drawable/ic_mini_star" />
+        tools:srcCompat="@drawable/ic_mini_star" />
 
     <ImageView
         android:id="@+id/mini_icon_2"
@@ -93,7 +93,7 @@
         app:layout_constraintBottom_toBottomOf="@id/mini_icon_1"
         app:layout_constraintEnd_toStartOf="@+id/mini_icon_3"
         app:layout_constraintStart_toEndOf="@+id/mini_icon_1"
-        app:srcCompat="@drawable/ic_mini_star" />
+        tools:srcCompat="@drawable/ic_mini_star" />
 
     <ImageView
         android:id="@+id/mini_icon_3"
@@ -104,7 +104,7 @@
         app:layout_constraintBottom_toBottomOf="@id/mini_icon_1"
         app:layout_constraintEnd_toStartOf="@+id/mini_icon_4"
         app:layout_constraintStart_toEndOf="@+id/mini_icon_2"
-        app:srcCompat="@drawable/ic_mini_star" />
+        tools:srcCompat="@drawable/ic_mini_star" />
 
     <ImageView
         android:id="@+id/mini_icon_4"
@@ -115,7 +115,7 @@
         app:layout_constraintBottom_toBottomOf="@id/mini_icon_1"
         app:layout_constraintEnd_toStartOf="@+id/mini_icon_5"
         app:layout_constraintStart_toEndOf="@+id/mini_icon_3"
-        app:srcCompat="@drawable/ic_mini_star" />
+        tools:srcCompat="@drawable/ic_mini_star" />
 
     <ImageView
         android:id="@+id/mini_icon_5"
@@ -125,7 +125,7 @@
         app:layout_constraintBottom_toBottomOf="@id/mini_icon_1"
         app:layout_constraintEnd_toStartOf="@+id/mini_reviews"
         app:layout_constraintStart_toEndOf="@+id/mini_icon_4"
-        app:srcCompat="@drawable/ic_mini_star_off" />
+        tools:srcCompat="@drawable/ic_mini_star_off" />
 
     <TextView
         android:id="@+id/mini_reviews"
@@ -133,13 +133,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
-        android:text="@string/reviews"
         android:textColor="@color/gray"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="@id/mini_icon_1"
         app:layout_constraintStart_toEndOf="@+id/mini_icon_5"
         app:layout_constraintTop_toTopOf="@id/mini_icon_1"
-        tools:ignore="SmallSp" />
+        tools:ignore="SmallSp"
+        tools:text="@string/reviews" />
 
     <TextView
         android:id="@+id/mini_category_movies"
@@ -148,12 +148,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/category_films"
         android:textColor="@color/pink"
         android:textSize="8sp"
         app:layout_constraintBottom_toTopOf="@id/mini_icon_1"
         app:layout_constraintStart_toStartOf="@id/movie_image"
-        tools:ignore="SmallSp" />
+        tools:ignore="SmallSp"
+        tools:text="@string/category_films" />
 
     <TextView
         android:id="@+id/mini_name_film"
@@ -161,25 +161,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/mini_name"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/movie_image"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/movie_image"
-        app:layout_constraintTop_toTopOf="@id/mini_guide_line" />
+        app:layout_constraintTop_toTopOf="@id/mini_guide_line"
+        tools:text="@string/mini_name" />
 
     <TextView
         android:id="@+id/mini_time"
         style="@style/Black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mini_time"
         android:textColor="@color/gray"
         android:textSize="8sp"
         app:layout_constraintEnd_toEndOf="@+id/mini_name_film"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/mini_name_film"
         app:layout_constraintTop_toBottomOf="@+id/mini_name_film"
-        tools:ignore="SmallSp" />
+        tools:ignore="SmallSp"
+        tools:text="@string/mini_time" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,8 @@
     <item name="marginStoryText" type="dimen">16dp</item>
     <item name="marginNameFilm" type="dimen">8dp</item>
     <item name="marginRating" type="dimen">8dp</item>
-    <item name="marginRV" type="dimen">8dp</item>
+    <item name="marginRVMoviesList" type="dimen">8dp</item>
+    <item name="marginRVActors" type="dimen">16dp</item>
     <dimen name="paddingLeft">8dp</dimen>
     <dimen name="marginTopMoviesList">40dp</dimen>
     <dimen name="Mini_marginBottom">50dp</dimen>
