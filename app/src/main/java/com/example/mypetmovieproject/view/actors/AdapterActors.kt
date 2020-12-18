@@ -1,21 +1,22 @@
-package com.example.mypetmovieproject
+package com.example.mypetmovieproject.view.actors
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import java.util.zip.Inflater
+import com.example.mypetmovieproject.R
+import com.example.mypetmovieproject.model.ActorsDetails
+
 
 class AdapterActors(
     context: Context,
-    private val actors: List<DataActors>
-):RecyclerView.Adapter<ViewHolderActors>() {
+    private val actors: List<ActorsDetails>
+) : RecyclerView.Adapter<ViewHolderActors>() {
 
-    private val inflater : LayoutInflater = LayoutInflater.from(context)
+    private val inflater: LayoutInflater = LayoutInflater.from(context)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderActors {
-        return ViewHolderActors(inflater.inflate(R.layout.view_holder_actor , parent , false))
+        return ViewHolderActors(inflater.inflate(R.layout.view_holder_actor, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolderActors, position: Int) {
@@ -25,5 +26,6 @@ class AdapterActors(
     override fun getItemCount(): Int {
         return actors.size
     }
-    fun getItem(position: Int) : DataActors = actors[position]
+
+    fun getItem(position: Int): ActorsDetails = actors[position]
 }

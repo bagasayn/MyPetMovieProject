@@ -1,37 +1,30 @@
-package com.example.mypetmovieproject
-/**
-* Details:
- * movie
- * like
- * age
- * star1
- * star2
- * star3
- * star4
- * star5
- * category
- * reviews
- * name movie
- * time
- */
-data class DataMoviesDetails(
-    val movie: Int,
-    val like: Boolean,
-    val age: String,
-    val starOne: Boolean,
-    val starTwo: Boolean,
-    val starThree: Boolean,
-    val starFour: Boolean,
-    val starFive: Boolean,
-    val categoryMovies: String,
-    val reviews: String,
-    val nameMovie: String,
-    val time: String
-)
+package com.example.mypetmovieproject.data
 
-fun generateDataMoviesDetails(): List<DataMoviesDetails> {
-    return listOf(
-        DataMoviesDetails(
+import com.example.mypetmovieproject.R
+import com.example.mypetmovieproject.model.ActorsDetails
+import com.example.mypetmovieproject.model.MoviesDetails
+
+object DataSource {
+    val actors = listOf(
+        ActorsDetails(
+            R.drawable.robert,
+            R.string.robert_downey_jr
+        ),
+        ActorsDetails(
+            R.drawable.evans,
+            R.string.chris_evans
+        ),
+        ActorsDetails(
+            R.drawable.mark,
+            R.string.mark_ruffalo
+        ),
+        ActorsDetails(
+            R.drawable.hemsworth,
+            R.string.chris_hemsworth
+        )
+    )
+    val movies = listOf(
+        MoviesDetails(
             R.drawable.avengers_end_game,
             false,
             "13+",
@@ -45,7 +38,7 @@ fun generateDataMoviesDetails(): List<DataMoviesDetails> {
             nameMovie = "Avengers: End Game",
             time = "137 min"
         ),
-        DataMoviesDetails(
+        MoviesDetails(
             R.drawable.tenet,
             true,
             "16+",
@@ -59,7 +52,7 @@ fun generateDataMoviesDetails(): List<DataMoviesDetails> {
             nameMovie = "Tenet",
             time = "97 min"
         ),
-        DataMoviesDetails(
+        MoviesDetails(
             R.drawable.black_widow,
             false,
             "13+",
@@ -73,7 +66,7 @@ fun generateDataMoviesDetails(): List<DataMoviesDetails> {
             nameMovie = "Black Widow",
             time = "102 min"
         ),
-        DataMoviesDetails(
+        MoviesDetails(
             R.drawable.wonder_woman,
             false,
             "16+",

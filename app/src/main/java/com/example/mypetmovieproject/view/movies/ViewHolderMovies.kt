@@ -1,9 +1,11 @@
-package com.example.mypetmovieproject
+package com.example.mypetmovieproject.view.movies
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mypetmovieproject.R
+import com.example.mypetmovieproject.model.MoviesDetails
 
 class ViewHolderMovies(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -20,7 +22,7 @@ class ViewHolderMovies(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val nameMovie: TextView = itemView.findViewById(R.id.mini_name_film)
     private val time: TextView = itemView.findViewById(R.id.mini_time)
 
-    fun bind(data: DataMoviesDetails) {
+    fun bind(data: MoviesDetails) {
         // TODO: icon movie
         movie.setImageResource(data.movie)
 

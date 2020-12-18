@@ -1,13 +1,15 @@
-package com.example.mypetmovieproject
+package com.example.mypetmovieproject.view
 
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.mypetmovieproject.ClickListener
+import com.example.mypetmovieproject.R
+import com.example.mypetmovieproject.model.MoviesDetails
 
 class FragmentMoviesDetails : Fragment() {
     private var listener: ClickListener? = null
@@ -50,6 +52,17 @@ class FragmentMoviesDetails : Fragment() {
     override fun onDetach() {
         super.onDetach()
         listener = null
+    }
+
+    companion object {
+        fun instance(movie: MoviesDetails): FragmentMoviesDetails {
+            return FragmentMoviesDetails().apply {
+                arguments = Bundle().apply {
+                    putParcelable("movie", movie)
+                }
+            }
+        }
+
     }
 }
 
