@@ -7,12 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.mypetmovieproject.ClickListener
 import com.example.mypetmovieproject.R
+import com.example.mypetmovieproject.data.DataSource
 import com.example.mypetmovieproject.model.MoviesDetails
+import com.example.mypetmovieproject.view.actors.AdapterActors
 
 class FragmentMoviesDetails : Fragment() {
     private var listener: ClickListener? = null
+    private var movie: MoviesDetails? = null
+    private var adapter = AdapterActors()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        movie = arguments?.getParcelable("movie")
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,21 +33,22 @@ class FragmentMoviesDetails : Fragment() {
         //(что мы хотим передать,
         // куда мы хотим передать,
         // необхожимость привязать наш фрагмент к нашему контейнеру)
-        val view = inflater.inflate(R.layout.fragment_movie_details, container, false)
-
-        //поиск view на фрагменте
-//        view?.findViewById<ImageView>(R.id.movie_avengers)?.apply{clipToOutline = true}
-//        view?.findViewById<ImageView>(R.id.robert)?.apply { clipToOutline = true }
-//        view?.findViewById<ImageView>(R.id.evans)?.apply { clipToOutline = true }
-//        view?.findViewById<ImageView>(R.id.mark)?.apply { clipToOutline = true }
-//        view?.findViewById<ImageView>(R.id.hemsworth)?.apply { clipToOutline = true }
-
-        return view
+        return inflater.inflate(R.layout.fragment_movie_details, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        adapter.bindActors(actors = DataSource.actors)
+        val recycler = requireView().findViewById<RecyclerView>(R.id.rv_actors)
+        recycler.apply {
+            adapter = this@FragmentMoviesDetails.adapter
+            layoutManager = LinearLayoutManager(
+                requireContext(), RecyclerView.HORIZONTAL, false
+            )
+            setHasFixedSize(true)
+
+        }
         view.findViewById<TextView>(R.id.back_text).setOnClickListener {
             listener?.back()
         }

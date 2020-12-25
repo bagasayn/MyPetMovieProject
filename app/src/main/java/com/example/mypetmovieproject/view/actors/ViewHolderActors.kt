@@ -13,6 +13,6 @@ class ViewHolderActors(itemView: View):RecyclerView.ViewHolder(itemView) {
 
     fun bind(data: ActorsDetails){
         actorIcon.setImageResource(data.icon)
-        actorName.text = data.name.toString()
+        actorName.setText(data.name)
     }
 }

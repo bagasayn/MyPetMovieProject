@@ -1,6 +1,7 @@
 package com.example.mypetmovieproject.model
 
 import android.os.Parcelable
+import androidx.annotation.DrawableRes
 import kotlinx.parcelize.Parcelize
 
 /**
@@ -20,6 +21,7 @@ import kotlinx.parcelize.Parcelize
  */
 @Parcelize
 data class MoviesDetails(
+    @DrawableRes
     val movie: Int,
     val like: Boolean,
     val age: String,

@@ -1,24 +1,25 @@
 package com.example.mypetmovieproject.view
 
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mypetmovieproject.ClickListener
 import com.example.mypetmovieproject.R
 import com.example.mypetmovieproject.model.MoviesDetails
 import com.example.mypetmovieproject.data.DataSource
 import com.example.mypetmovieproject.view.movies.AdapterMovies
-import com.example.mypetmovieproject.view.movies.OnRecyclerItemClicked
 
-import com.google.android.material.snackbar.Snackbar
 
-class FragmentMoviesList : Fragment() {
+class FragmentMoviesList : Fragment(), AdapterMovies.OnRecyclerItemClicked {
 
-    //    private var listener: ClickListener? = null
-    private var moviesRecycler: RecyclerView? = null
+    private var listener: ClickListener? = null
+    private var adapterMovies = AdapterMovies(this)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,38 +35,28 @@ class FragmentMoviesList : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //слушаем нажатие на View нашего фильма
-//        view.findViewById<View>(R.id.fragment_movie_details).setOnClickListener {
-//            listener?.openMovieDetails()
-//        }
-        moviesRecycler = view.findViewById(R.id.rv_list_movies)
-        moviesRecycler?.adapter = AdapterMovies(clickListener)
-    }
-
-
-    private val clickListener = object : OnRecyclerItemClicked {
-        override fun onClick(movies: MoviesDetails) {
-            moviesRecycler?.let { rv ->
-                Snackbar.make(
-                    rv,
-                    getString(R.string.fragment_actors_chosen_text, movies.nameMovie),
-                    Snackbar.LENGTH_SHORT
-                    )
-            }
+        val recycler = requireView().findViewById<RecyclerView>(R.id.rv_list_movies)
+        recycler.apply {
+            adapter = this@FragmentMoviesList.adapterMovies
+            layoutManager = GridLayoutManager(requireContext(), 2)
         }
+        adapterMovies.bindMovies(DataSource.movies)
+
     }
 
-
-    override fun onStart() {
-        super.onStart()
-        (moviesRecycler?.adapter as? AdapterMovies)?.apply {
-            bindMovies(DataSource.movies)
-        }
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is ClickListener) listener = context
     }
+
     //обнуляем listener для избежания утечки памяти
     override fun onDetach() {
-
-        moviesRecycler = null
         super.onDetach()
+        listener = null
+    }
+
+    override fun onClick(movies: MoviesDetails) {
+        listener?.openMovieDetails(movies)
     }
 
 

@@ -12,17 +12,18 @@ class ViewHolderMovies(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val movie: ImageView = itemView.findViewById(R.id.movie_image)
     private val like: ImageView = itemView.findViewById(R.id.mini_like)
     private val age: TextView = itemView.findViewById(R.id.mini_age_text)
-    private val starOne: ImageView = itemView.findViewById(R.id.star_icon1)
-    private val starTwo: ImageView = itemView.findViewById(R.id.star_icon2)
-    private val starThree: ImageView = itemView.findViewById(R.id.star_icon3)
-    private val starFour: ImageView = itemView.findViewById(R.id.star_icon4)
-    private val starFive: ImageView = itemView.findViewById(R.id.star_icon5)
+    private val starOne: ImageView = itemView.findViewById(R.id.mini_icon_1)
+    private val starTwo: ImageView = itemView.findViewById(R.id.mini_icon_2)
+    private val starThree: ImageView = itemView.findViewById(R.id.mini_icon_3)
+    private val starFour: ImageView = itemView.findViewById(R.id.mini_icon_4)
+    private val starFive: ImageView = itemView.findViewById(R.id.mini_icon_5)
     private val categoryMovies: TextView = itemView.findViewById(R.id.mini_category_movies)
     private val reviews: TextView = itemView.findViewById(R.id.mini_reviews)
     private val nameMovie: TextView = itemView.findViewById(R.id.mini_name_film)
     private val time: TextView = itemView.findViewById(R.id.mini_time)
 
     fun bind(data: MoviesDetails) {
+
         // TODO: icon movie
         movie.setImageResource(data.movie)
 
