@@ -2,12 +2,14 @@ package com.example.mypetmovieproject.view
 
 
 import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mypetmovieproject.ClickListener
 import com.example.mypetmovieproject.R
@@ -38,7 +40,10 @@ class FragmentMoviesList : Fragment(), AdapterMovies.OnRecyclerItemClicked {
         val recycler = requireView().findViewById<RecyclerView>(R.id.rv_list_movies)
         recycler.apply {
             adapter = this@FragmentMoviesList.adapterMovies
-            layoutManager = GridLayoutManager(requireContext(), 2)
+            layoutManager = if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
+                GridLayoutManager(requireContext(), 2)
+            else
+                LinearLayoutManager(requireContext(),RecyclerView.HORIZONTAL,false)
         }
         adapterMovies.bindMovies(DataSource.movies)
 

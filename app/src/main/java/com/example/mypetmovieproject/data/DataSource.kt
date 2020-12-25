@@ -21,7 +21,23 @@ object DataSource {
         ActorsDetails(
             R.drawable.hemsworth,
             R.string.chris_hemsworth
-        )
+        ),
+        ActorsDetails(
+            R.drawable.robert,
+            R.string.robert_downey_jr
+        ),
+        ActorsDetails(
+            R.drawable.evans,
+            R.string.chris_evans
+        ),
+        ActorsDetails(
+            R.drawable.mark,
+            R.string.mark_ruffalo
+        ),
+        ActorsDetails(
+            R.drawable.hemsworth,
+            R.string.chris_hemsworth
+        ),
     )
     val movies = listOf(
         MoviesDetails(

@@ -10,16 +10,19 @@
 
     <ImageView
         android:id="@+id/actor_icon"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintDimensionRatio="W,1:1"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/actor_name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/robert" />
+        tools:src="@drawable/robert"
+        android:contentDescription="@string/robert" />
 
     <TextView
         android:id="@+id/actor_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTop"
         android:textColor="@color/white"

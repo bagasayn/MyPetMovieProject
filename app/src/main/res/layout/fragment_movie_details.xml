@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background_black"
     android:fillViewport="true">
 
@@ -228,116 +228,17 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_actors"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginStart="@dimen/marginHorizontal"
+            android:layout_marginEnd="@dimen/marginHorizontal"
+            android:overScrollMode="never"
+            tools:listitem="@layout/view_holder_actor"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cast"/>
-<!--            android:overScrollMode="never"-->
-
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/robert"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="0dp"-->
-        <!--            android:layout_marginStart="@dimen/marginHorizontal"-->
-        <!--            android:contentDescription="@string/robert"-->
-        <!--            android:src="@drawable/robert"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@+id/robert_text"-->
-        <!--            app:layout_constraintDimensionRatio="W,1:1"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/evans"-->
-        <!--            app:layout_constraintHorizontal_chainStyle="spread_inside"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/cast"-->
-        <!--            app:layout_constraintVertical_bias="0.2" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/robert_text"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="@dimen/marginTop"-->
-        <!--            android:text="@string/robert_downey_jr"-->
-        <!--            android:textAlignment="viewStart"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="12sp"-->
-        <!--            app:layout_constraintEnd_toEndOf="@+id/robert"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/robert"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/robert" />-->
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/evans"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="0dp"-->
-        <!--            android:layout_marginHorizontal="@dimen/marginTop"-->
-        <!--            android:contentDescription="@string/chris_evans"-->
-        <!--            android:src="@drawable/evans"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@+id/robert"-->
-        <!--            app:layout_constraintDimensionRatio="W,1:1"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/mark"-->
-        <!--            app:layout_constraintStart_toEndOf="@id/robert"-->
-        <!--            app:layout_constraintTop_toTopOf="@+id/robert" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/evans_text"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="@string/chris_evans"-->
-        <!--            android:textAlignment="viewStart"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="12sp"-->
-        <!--            app:layout_constraintBaseline_toBaselineOf="@+id/robert_text"-->
-        <!--            app:layout_constraintEnd_toEndOf="@+id/evans"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/evans" />-->
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/mark"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="0dp"-->
-        <!--            android:layout_marginEnd="@dimen/marginEnd"-->
-        <!--            android:contentDescription="@string/mark"-->
-        <!--            android:src="@drawable/mark"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@+id/evans"-->
-        <!--            app:layout_constraintDimensionRatio="W,1:1"-->
-        <!--            app:layout_constraintEnd_toStartOf="@id/hemsworth"-->
-        <!--            app:layout_constraintStart_toEndOf="@+id/evans"-->
-        <!--            app:layout_constraintTop_toTopOf="@+id/evans" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/mark_text"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="@string/mark_ruffalo"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="12sp"-->
-        <!--            app:layout_constraintBaseline_toBaselineOf="@+id/robert_text"-->
-        <!--            app:layout_constraintEnd_toEndOf="@+id/mark"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/mark" />-->
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/hemsworth"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="0dp"-->
-        <!--            android:layout_marginEnd="@dimen/marginHorizontal"-->
-        <!--            android:contentDescription="@string/hemswort"-->
-        <!--            android:src="@drawable/hemsworth"-->
-        <!--            app:layout_constraintBottom_toBottomOf="@+id/mark"-->
-        <!--            app:layout_constraintDimensionRatio="W,1:1"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toEndOf="@id/mark"-->
-        <!--            app:layout_constraintTop_toTopOf="@+id/mark" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/hemsworth_text"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="@string/chris_hemsworth"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="12sp"-->
-        <!--            app:layout_constraintBaseline_toBaselineOf="@+id/robert_text"-->
-        <!--            app:layout_constraintEnd_toEndOf="@+id/hemsworth"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/hemsworth" />-->
+            app:layout_constraintTop_toBottomOf="@+id/cast" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
