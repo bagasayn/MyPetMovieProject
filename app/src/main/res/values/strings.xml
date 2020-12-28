@@ -22,4 +22,5 @@
     <string name="mini_like">like</string>
     <string name="mini_name">Avengers: End Game</string>
     <string name="mini_time">137 MIN</string>
+    <string name="fragment_actors_chosen_text">You chose: %1$s</string>
 </resources>
