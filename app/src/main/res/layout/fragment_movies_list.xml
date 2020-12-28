@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_black">
+
+        <TextView
+            android:id="@+id/movies_list_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginHorizontal"
+            android:layout_marginTop="@dimen/marginTopMoviesList"
+            android:drawablePadding="@dimen/paddingLeft"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/movies_list_title"
+            android:textColor="@color/white_text"
+            android:textSize="14sp"
+            app:drawableLeftCompat="@drawable/ic_movies_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/fragment_movie_details"
+            layout="@layout/mini_fragment_movie_details"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintDimensionRatio="W,1:2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movies_list_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
