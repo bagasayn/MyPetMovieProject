@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyPetMovieProject</string>
+    <string name="app_name">PetMovieProject</string>
     <string name="Hero">ImageHero</string>
     <string name="age">13+</string>
     <string name="name">Avengers:\nEnd Game</string>
