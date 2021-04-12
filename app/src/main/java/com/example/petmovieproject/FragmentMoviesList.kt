@@ -1,15 +1,13 @@
-package com.example.mypetmovieproject
+package com.example.petmovieproject
 
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 
-class FragmentMoviesDetails : Fragment() {
+class FragmentMoviesList : Fragment() {
     private var listener: ClickListener? = null
 
     override fun onCreateView(
@@ -20,23 +18,14 @@ class FragmentMoviesDetails : Fragment() {
         //(что мы хотим передать,
         // куда мы хотим передать,
         // необхожимость привязать наш фрагмент к нашему контейнеру)
-        val view = inflater.inflate(R.layout.fragment_movie_details, container, false)
-
-        //поиск view на фрагменте
-//        view?.findViewById<ImageView>(R.id.movie_avengers)?.apply{clipToOutline = true}
-//        view?.findViewById<ImageView>(R.id.robert)?.apply { clipToOutline = true }
-//        view?.findViewById<ImageView>(R.id.evans)?.apply { clipToOutline = true }
-//        view?.findViewById<ImageView>(R.id.mark)?.apply { clipToOutline = true }
-//        view?.findViewById<ImageView>(R.id.hemsworth)?.apply { clipToOutline = true }
-
-        return view
+        return inflater.inflate(R.layout.fragment_movies_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        view.findViewById<TextView>(R.id.back_text).setOnClickListener {
-            listener?.back()
+        //слушаем нажатие на View нашего фильма
+        view.findViewById<View>(R.id.fragment_movie_details).setOnClickListener {
+            listener?.openMovieDetails()
         }
     }
 
@@ -52,4 +41,3 @@ class FragmentMoviesDetails : Fragment() {
         listener = null
     }
 }
-

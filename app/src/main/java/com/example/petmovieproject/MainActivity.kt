@@ -1,4 +1,4 @@
-package com.example.mypetmovieproject
+package com.example.petmovieproject
 
 
 import androidx.appcompat.app.AppCompatActivity
